@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Survey Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+
+    h1, p {
+      text-align: center;
+    }
+
+    form {
+      max-width: 600px;
+      margin: auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .checkbox-group, .radio-group {
+      margin-top: 10px;
+    }
+
+    .checkbox-group label,
+    .radio-group label {
+      display: inline-block;
+      margin-right: 50px;
+      font-weight: normal;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="title">Customer Feedback Survey</h1>
+  <p id="description">We value your feedback! Please fill out this short survey.</p>
+
+  <form id="survey-form">
+
+    <label id="name-label" for="name">Name</label>
+    <input id="name" type="text" required placeholder="Enter your full name" />
+
+    <label id="email-label" for="email">Email</label>
+    <input id="email" type="email" required placeholder="Enter your email address" />
+
+    <label id="number-label" for="number">Age</label>
+    <input id="number" type="number" min="10" max="100" placeholder="Enter your age" />
+
+    <label for="dropdown">What is your current role?</label>
+    <select id="dropdown">
+      <option value="student">Student</option>
+      <option value="professional">Professional</option>
+    </select>
+
+    <label>Would you recommend us?</label>
+    <div class="radio-group">
+      <label><input type="radio" name="recommend" value="yes" /> Yes</label>
+      <label><input type="radio" name="recommend" value="no" /> No</label>
+    </div>
+
+    <label>What features do you use?</label>
+    <div class="checkbox-group">
+      <label><input type="checkbox" value="feature1" /> Feature 1</label>
+      <label><input type="checkbox" value="feature2" /> Feature 2</label>
+      <label><input type="checkbox" value="feature3" /> Feature 3</label>
+    </div>
+
+    <label for="comments">Additional Comments</label>
+    <textarea id="comments" rows="4" placeholder="Let us know more..."></textarea>
+
+    <button id="submit" type="submit">Submit</button>
+
+  </form>
+</body>
+</html>
